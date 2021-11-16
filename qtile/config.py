@@ -146,23 +146,6 @@ groups = [Group("", layout='monadtall'),
 from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder(mod)
 
-#  groups = [Group(i) for i in "123456789"]
-
-#  for i in groups:
-    #  keys.extend([
-        # mod1 + letter of group = switch to group
-        #  Key([mod], i.name, lazy.group[i.name].toscreen(),
-            #  desc="Switch to group {}".format(i.name)),
-
-        # mod1 + shift + letter of group = switch to & move focused window to group
-        #Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-        #    desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        #  Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-            #  desc="move focused window to group {}".format(i.name)),
-    #  ])
-
 layouts = [
     layout.Columns(border_focus_stack=accentcolor,
         border_focus=accentcolor,
@@ -197,95 +180,6 @@ layouts = [
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
-
-#  widget_defaults = dict(
-    #  font='Inconsolata',
-    #  fontsize=18,
-    #  padding=6,
-#  )
-#  extension_defaults = widget_defaults.copy()
-#
-#  screens = [
-    #  Screen(
-        #  top=bar.Bar(
-            #  [
-                #  widget.CurrentLayout(),
-                #  widget.GroupBox(border="ff0000", borderwidth=2, foreground="ffffff"),
-                #  widget.Prompt(),
-                #  widget.WindowName(),
-                #  widget.Chord(
-                    #  chords_colors={
-                        #  'launch': ("#ff0000", "#ffffff"),
-                    #  },
-                    #  name_transform=lambda name: name.upper(),
-                #  ),
-                #  widget.TextBox("Battery:", foreground=accentcolor),
-                #  widget.Battery(),
-                #  widget.TextBox("|", foreground=accentcolor),
-                #  widget.Systray(),
-                #  widget.TextBox("|", foreground=accentcolor),
-                #  widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                #  widget.QuickExit(),
-            #  ],
-            #  38,
-            #  background=barBackgroundColor,
-        #  ),
-    #  ),
-#  Screen(
-        #  top=bar.Bar(
-            #  [
-                #  widget.CurrentLayout(),
-                #  widget.GroupBox(),
-                #  widget.Prompt(),
-                #  widget.WindowName(),
-                #  widget.Chord(
-                    #  chords_colors={
-                        #  'launch': ("#ff0000", "#ffffff"),
-                    #  },
-                    #  name_transform=lambda name: name.upper(),
-                #  ),
-                #  widget.TextBox("Battery:", foreground=accentcolor),
-                #  widget.Battery(),
-                #  widget.TextBox("|", foreground=accentcolor),
-                #  widget.Systray(),
-                #  widget.TextBox("|", foreground=accentcolor),
-                #  widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                #  widget.QuickExit(),
-            #  ],
-            #  38,
-            #  background=barBackgroundColor,
-        #  ),
-    #  ),
-#
-#  ]
-#
-#  Drag floating layouts.
-#  mouse = [
-    #  Drag([mod], "Button2", lazy.window.set_position_floating(),
-         #  start=lazy.window.get_position()),
-    #  Drag([mod], "Button3", lazy.window.set_size_floating(),
-         #  start=lazy.window.get_size()),
-    #  Click([mod], "Button2", lazy.window.bring_to_front())
-#  ]
-#
-#  dgroups_key_binder = None
-#  dgroups_app_rules = []  # type: List
-#  main = None  # WARNING: this is deprecated and will be removed soon
-#  follow_mouse_focus = True
-#  bring_front_click = False
-#  cursor_warp = False
-#  floating_layout = layout.Floating(float_rules=[
-    #  Run the utility of `xprop` to see the wm class and name of an X client.
-    #  *layout.Floating.default_float_rules,
-    #  Match(wm_class='confirmreset'),  # gitk
-    #  Match(wm_class='makebranch'),  # gitk
-    #  Match(wm_class='maketag'),  # gitk
-    #  Match(wm_class='ssh-askpass'),  # ssh-askpass
-    #  Match(title='branchdialog'),  # gitk
-    #  Match(title='pinentry'),  # GPG key password entry
-#  ])
-#  auto_fullscreen = True
-#  focus_on_window_activation = "smart"
 
 ##### COLORS #####
 colors = [
