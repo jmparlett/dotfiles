@@ -1,1 +1,2 @@
 # dotfiles
+Linux config files.
